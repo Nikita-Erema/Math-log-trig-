@@ -12,7 +12,7 @@ test('test Magician 2',() => {
 test('test Magician and Daemons',() => {
     const mage = new Magician
     const demon = new Daemon
-    demon.stoned = true
+    mage.stoned = true
     mage.attack = 4
     expect(mage.damage).toBe(60)
 })
@@ -29,7 +29,7 @@ test('test Daemon 2',() => {
 test('test Daemons and Magician',() => {
     const mage = new Magician
     const demon = new Daemon
-    mage.stoned = true
+    demon.stoned = true
     demon.attack = 4
     expect(demon.damage).toBe(60)
 })
