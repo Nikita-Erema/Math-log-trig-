@@ -5,10 +5,14 @@ class Character {
   }
 
   set attack(position) {
-    this.percent = (position - 1) * 10
+    this.position = position
+  }
+
+  get attack() {
+    this.percent = (this.position - 1) * 10
     this.damage = this.damage - (this.damage / 100) * this.percent
     if(this.stun) {   
-        this.damage = Math.round(this.damage - Math.log2(position) * 5 )
+        this.damage = Math.round(this.damage - Math.log2(this.position) * 5 )
     }
   }
 
